@@ -18,10 +18,10 @@ const port = 7700;
 
 const corsOptions = {
   origin: "https://evangadi.lulayx.com", // Replace with your exact frontend origin
-  credentials: false,
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
-  optionsSuccessStatus: 204,
+  // credentials: false,
+  // methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  // allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+  // optionsSuccessStatus: 204,
 };
 
 // Apply CORS middleware
