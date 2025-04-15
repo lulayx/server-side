@@ -85,7 +85,7 @@ rating_id int(11) NOT NULL AUTO_INCREMENT,
   FOREIGN KEY (user_id) REFERENCES usertable(user_id),
   created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 )`;
-
+// the best website 
   dbConnection.query(createusertable, (err) => {
     if (err) return res.status(500).send("Error creating usertable: " + err);
 
