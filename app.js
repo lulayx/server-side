@@ -5,17 +5,27 @@ const app = express();
 const cors = require("cors");
 const port = 7700;
 
+// const corsOptions = {
+//   origin: "*", // This is too permissive for production
+//   credentials: false,
+//   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+//   optionsSuccessStatus: 204,
+// };
+
+// app.use(cors(corsOptions));
+// app.options("*", cors(corsOptions)); // This should handle preflight
+
 const corsOptions = {
-  origin: "*", // This is too permissive for production
+  origin: "https://evangadi.lulayx.com", // Replace with your exact frontend origin
   credentials: false,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
   optionsSuccessStatus: 204,
 };
 
+// Apply CORS middleware
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // This should handle preflight
-
 
 
 app.use(express.json());
