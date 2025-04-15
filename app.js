@@ -16,6 +16,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions)); // This should handle preflight
 
+
+
 app.use(express.json());
 
 //  routes middleware file
